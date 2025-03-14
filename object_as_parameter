@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+class sample
+{
+    private:
+    int a;
+    public:
+    sample(int a)
+    {
+        this->a = a;
+    }
+    void geta()
+    {
+        cout << "enter value of a : ";
+        cin >> a;
+    }
+    void puta()
+    {
+        cout << endl << "value of a : " << a << endl;
+    }
+    void big(sample b)
+    {
+        (this->a>b.a) ? (cout << "A is bigger than B" << endl) : (this->a<b.a) ? (cout << "B is bigger than A" << endl):(cout << "Both are equal" << endl);
+    }
+};
+
+int main()
+{
+    sample X(10);
+    sample Y(1);
+    X.big(Y);
+    return 1;
+}
